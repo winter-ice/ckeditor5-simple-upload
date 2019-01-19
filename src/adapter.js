@@ -29,7 +29,7 @@ export default class Adapter {
 			headers = this.urlOrObject.headers;
 		}
 
-        xhr.withCredentials = true;
+        xhr.withCredentials = false;
         xhr.open('POST', url, true);
 		if (headers !== null){
 			for(let key in headers){
@@ -76,7 +76,7 @@ export default class Adapter {
 
     _sendRequest() {
         const data = new FormData();
-        data.append('upload', this.loader.file);
+        data.append('file', this.loader.file);
         this.xhr.send(data);
     }
 }
