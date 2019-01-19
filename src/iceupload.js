@@ -3,21 +3,21 @@ import FileRepository from '@ckeditor/ckeditor5-upload/src/filerepository';
 
 import Adapter from './adapter';
 
-export default class SimpleUpload extends Plugin {
+export default class IceUpload extends Plugin {
 
     static get requires() {
         return [FileRepository];
     }
 
     static get pluginName() {
-        return 'SimpleUpload';
+        return 'IceUpload';
     }
 
     init() {
-        const url = this.editor.config.get('simpleUpload.uploadUrl');
+        const url = this.editor.config.get('iceUpload.uploadUrl');
 
         if (!url) {
-            console.warn('simpleUpload.uploadUrl is not configured')
+            console.warn('iceUpload.uploadUrl is not configured');
             return;
         }
 

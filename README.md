@@ -1,10 +1,17 @@
+## notice
+this package is forked from https://github.com/pourquoi/ckeditor5-simple-upload
+
+there is the change:
+
+1. change `xhr.withCredentials = true` to `xhr.withCredentials = false`
+2. change  `data.append('upload', this.loader.file)` to ` data.append('file', this.loader.file);`
 ## standard image upload button
 
 ### build integration
 
 https://docs.ckeditor.com/ckeditor5/latest/builds/guides/development/custom-builds.html
 
-```npm install ckeditor5-simple-upload```
+```npm install ckeditor5-ice-upload```
 
 add this plugin and remove the ckfinder and easyimage plugins
 
@@ -21,7 +28,7 @@ module.exports = {
         //'@ckeditor/ckeditor5-adapter-ckfinder/src/uploadadapter',
         //'@ckeditor/ckeditor5-easy-image/src/easyimage',
 
-        'ckeditor5-simple-upload/src/simpleupload'
+        'ckeditor5-ice-upload/src/iceupload'
 
         // ...
     ],
@@ -53,7 +60,7 @@ module.exports = {
 
 ```javascript
 ClassicEditor.create(document.querySelector( '#editor' ), {
-    simpleUpload: {
+    iceUpload: {
         uploadUrl: 'http://127.0.0.1/my-upload-endpoint'
     }
 })
@@ -62,7 +69,7 @@ ClassicEditor.create(document.querySelector( '#editor' ), {
 ```javascript
 var cb = function() { return (new Date()).getTime() }
 ClassicEditor.create(document.querySelector( '#editor' ), {
-    simpleUpload: {
+    iceUpload: {
         uploadUrl: {url:'http://127.0.0.1/my-upload-endpoint', headers:{ 'x-header':'myhead', 'x-header-cb': cb } }
     }
 })

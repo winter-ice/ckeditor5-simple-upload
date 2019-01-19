@@ -1,20 +1,20 @@
 {
-  "name": "ckeditor5-simple-upload",
-  "version": "1.0.3",
-  "description": "Standart image upload plugin for ckeditor5",
+  "name": "ckeditor5-ice-upload",
+  "version": "1.0.0",
+  "description": "forked from https://github.com/pourquoi/ckeditor5-simple-upload",
   "keywords": [
     "ckeditor5",
     "image"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/pourquoi/ckeditor5-simple-upload.git"
+    "url": "https://github.com/winter-ice/ckeditor5-ice-upload.git"
   },
   "files": [
     "src",
     "theme"
   ],
-  "author": "pourquoi",
+  "author": "winter-ice",
   "license": "MIT",
   "dependencies": {
     "@ckeditor/ckeditor5-core": "^10.0.0",
